@@ -25,9 +25,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <!-- Custom Enhancements -->
-  <script src="js/index-enhancements.js" defer></script>
-
   <!-- Loader Animation -->
   <style>
     .shimmer {
@@ -54,13 +51,9 @@
     <nav class="space-x-4">
       <a href="index.html" class="hover:underline">Home</a>
       <a href="show-booking.html" class="hover:underline">Book Tickets</a>
-       <a href="admin.html" class="hover:underline">admin</a>
+      <a href="admin.html" class="hover:underline">Admin</a>
     </nav>
     <div class="flex items-center space-x-3">
-      <img id="userPhoto" src="" alt="User Photo" class="h-8 w-8 rounded-full hidden" />
-      <span id="userName" class="font-semibold"></span>
-      <button id="loginBtn" class="bg-blue-600 text-white px-3 py-1 rounded">Login</button>
-      <button id="logoutBtn" class="bg-red-500 text-white px-3 py-1 rounded hidden">Logout</button>
       <button id="darkToggle" class="ml-2 px-2 py-1 text-sm rounded bg-gray-300 dark:bg-gray-600">🌓</button>
     </div>
   </header>
@@ -97,113 +90,55 @@
       <li>Rs. 250 – Executive (Rows I–J)</li>
     </ul>
     <p class="mb-4">Majority of seats are still open! Grab your spot early for the best view.</p>
-    <button id="bookSeatsBtn" class="bg-green-600 text-white px-4 py-2 rounded" disabled>Book Now</button>
+    <button id="bookSeatsBtn" class="bg-green-600 text-white px-4 py-2 rounded">Book Now</button>
   </section>
 
- <section class="p-6 bg-gray-100 dark:bg-gray-700 rounded-2xl shadow-md mt-8 overflow-hidden">
-  <h2 class="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
-    🎬 Upcoming Movies
-  </h2>
-
-  <!-- Scrolling Container -->
-  <div class="relative w-full overflow-hidden">
-    <div class="flex animate-scroll">
-      <!-- First Set -->
-      <div class="flex gap-6">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie1.jpg" alt="Movie 1 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Kantara Chapter 1</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 2, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie4.jpg" alt="Movie 4 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">lik: Love Insurance Kompany</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 17, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie5.jpg" alt="Movie 5 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Telusu Kadha</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 17, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie2.jpg" alt="Movie 2 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Baahubali - The Epic</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 31, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie3.jpg" alt="Movie 3 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Raja Saab</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: N/A</p>
-        </div>
-      </div>
-
-      <!-- Duplicate Set for seamless loop -->
-      <div class="flex gap-6">
-        <!-- copy-paste the same 5 movie cards here -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie1.jpg" alt="Movie 1 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Kantara Chapter 1</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 2, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie4.jpg" alt="Movie 4 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">lik: Love Insurance Kompany</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 17, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie5.jpg" alt="Movie 5 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Telusu Kadha</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 17, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie2.jpg" alt="Movie 2 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Baahubali - The Epic</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: OCT 31, 2025</p>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
-          <img src="images/movie3.jpg" alt="Movie 3 Poster" class="w-full h-48 object-cover rounded-lg mb-3">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Raja Saab</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Releasing on: N/A</p>
+  <section class="p-6 bg-gray-100 dark:bg-gray-700 rounded-2xl shadow-md mt-8 overflow-hidden">
+    <h2 class="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">🎬 Upcoming Movies</h2>
+    <div class="relative w-full overflow-hidden">
+      <div class="flex animate-scroll">
+        <!-- Movie Cards -->
+        <div class="flex gap-6">
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
+            <img src="images/movie1.jpg" class="w-full h-48 object-cover rounded-lg mb-3">
+            <h3 class="text-lg font-semibold">Kantara Chapter 1</h3>
+            <p class="text-sm">Releasing on: OCT 2, 2025</p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
+            <img src="images/movie4.jpg" class="w-full h-48 object-cover rounded-lg mb-3">
+            <h3 class="text-lg font-semibold">lik: Love Insurance Kompany</h3>
+            <p class="text-sm">Releasing on: OCT 17, 2025</p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-64 flex-shrink-0">
+            <img src="images/movie5.jpg" class="w-full h-48 object-cover rounded-lg mb-3">
+            <h3 class="text-lg font-semibold">Telusu Kadha</h3>
+            <p class="text-sm">Releasing on: OCT 17, 2025</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Moves by half since we duplicated cards */
-}
-.animate-scroll {
-  display: flex;
-  width: max-content;
-  animation: scroll 30s linear infinite;
-}
-</style>
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      display: flex;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+  </style>
 
-<section class="p-6 bg-gray-100 dark:bg-gray-700">
-  <h2 class="text-xl font-semibold mb-4">Watch the Official Trailer</h2>
-  <iframe 
-    class="w-full h-[500px] rounded-xl shadow" 
-    src="https://www.youtube.com/embed/_8J8LwoVH_0?si=XqW62TbJUfH1zpYU" 
-    allowfullscreen>
-  </iframe>
-</section>
-
-
+  <section class="p-6 bg-gray-100 dark:bg-gray-700">
+    <h2 class="text-xl font-semibold mb-4">Watch the Official Trailer</h2>
+    <iframe class="w-full h-[500px] rounded-xl shadow" src="https://www.youtube.com/embed/_8J8LwoVH_0?si=XqW62TbJUfH1zpYU" allowfullscreen></iframe>
+  </section>
 
   <section class="p-6">
     <h2 class="text-xl font-semibold mb-4">INOX Srinagar - Location</h2>
-<iframe class="w-full h-64" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.1670529772127!2d74.84299347571704!3d34.065231673152034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f2c0c3e35c5%3A0xfaff25a9ed5ab652!2sINOX%20Multiplex%20Cinemas!5e0!3m2!1sen!2sin!4v1754829461236!5m2!1sen!2sin" allowfullscreen></iframe>
+    <iframe class="w-full h-64" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.1670529772127!2d74.84299347571704!3d34.065231673152034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f2c0c3e35c5%3A0xfaff25a9ed5ab652!2sINOX%20Multiplex%20Cinemas!5e0!3m2!1sen!2sin!4v1754829461236!5m2!1sen!2sin" allowfullscreen></iframe>
   </section>
 
   <footer class="text-center text-sm p-4 bg-white dark:bg-gray-800 mt-4">
@@ -211,109 +146,11 @@
     <p>Contact: 9392532390 | gorrela_2022bece068@nitsri.ac.in</p>
   </footer>
 
-  <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg max-w-sm w-full">
-      <h3 class="text-lg font-semibold mb-4">Login to Book</h3>
-      <p class="mb-4">Please login using Google to continue.</p>
-      <button id="googleLogin" class="w-full bg-blue-600 text-white px-4 py-2 rounded">Login with Google</button>
-    </div>
-  </div>
-
-  <div id="toast" class="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-2 rounded shadow hidden z-50">Logged in successfully!</div>
-
-  <script type="module">
-    import { signInWithPopup, GoogleAuthProvider, getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-
-    const firebaseConfig = {
-  apiKey: "AIzaSyDdnckXpVsKdNoVjwN95u4O1ey-eZhZBhg",
-  authDomain: "bookmynitshow-adf83.firebaseapp.com",
-  projectId: "bookmynitshow-adf83",
-  storageBucket: "bookmynitshow-adf83.appspot.com",
-  messagingSenderId: "76671152034",
-  appId: "1:76671152034:web:9dd3e74e668327cd834cfb"
-};
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
-
-    const loginBtn = document.getElementById("loginBtn");
-    const logoutBtn = document.getElementById("logoutBtn");
-    const userName = document.getElementById("userName");
-    const userPhoto = document.getElementById("userPhoto");
-    const bookSeatsBtn = document.getElementById("bookSeatsBtn");
-    const darkToggle = document.getElementById("darkToggle");
-    const toast = document.getElementById("toast");
-
-    function showToast(message) {
-      toast.textContent = message;
-      toast.classList.remove("hidden");
-      setTimeout(() => toast.classList.add("hidden"), 3000);
-    }
-
-    function updateUserUI(user) {
-      loginBtn.classList.add("hidden");
-      logoutBtn.classList.remove("hidden");
-      userName.textContent = user.displayName;
-      userPhoto.src = user.photoURL || "assets/default-user.png";
-      userPhoto.classList.remove("hidden");
-      bookSeatsBtn.disabled = false;
-    }
-
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser) updateUserUI(storedUser);
-
-    logoutBtn.addEventListener("click", async () => {
-      await signOut(auth);
-      localStorage.removeItem("user");
-      showToast("Logged out successfully!");
-      setTimeout(() => location.reload(), 1000);
-    });
-
-    loginBtn.addEventListener("click", () => {
-      document.getElementById("loginModal").classList.remove("hidden");
-    });
-
-    document.getElementById("googleLogin").addEventListener("click", async () => {
-      try {
-        const result = await signInWithPopup(auth, provider);
-        const currentUser = {
-          displayName: result.user.displayName,
-          photoURL: result.user.photoURL
-        };
-        localStorage.setItem("user", JSON.stringify(currentUser));
-        updateUserUI(result.user);
-        document.getElementById("loginModal").classList.add("hidden");
-        showToast("Logged in successfully!");
-      } catch (error) {
-        alert("Login failed: " + error.message);
-      }
-    });
-
-    document.getElementById("bookNowBtn").addEventListener("click", () => {
-      const user = JSON.parse(localStorage.getItem("user"));
-      if (user) {
-        window.location.href = "show-booking.html";
-      } else {
-        document.getElementById("loginModal").classList.remove("hidden");
-      }
-    });
-
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-
-    darkToggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
-    });
-
-    document.getElementById("preloader").style.display = "none";
-  </script>
-
   <script>
+    // Preloader off
+    document.getElementById("preloader").style.display = "none";
+
+    // Typewriter effect
     let i = 0;
     const text = "Special Telugu Show at INOX Srinagar";
     const speed = 60;
@@ -325,12 +162,28 @@
       }
     }
     typeWriter();
+
+    // Scroll animation
     AOS.init({ duration: 1000, once: true });
-  </script>
-    <script>
-    // your typewriter + AOS code here
-    typeWriter();
-    AOS.init({ duration: 1000, once: true });
+
+    // Dark Mode toggle
+    const darkToggle = document.getElementById("darkToggle");
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+    darkToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+    });
+
+    // Booking logic — no login required
+    document.getElementById("bookNowBtn").addEventListener("click", () => {
+      window.location.href = "show-booking.html";
+    });
+    document.getElementById("bookSeatsBtn").addEventListener("click", () => {
+      window.location.href = "show-booking.html";
+    });
   </script>
 </body>
 </html>
